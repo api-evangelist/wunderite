@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.wunderite.com + https://status.wunderite.com/
+versioning:
+  scheme: uri-path
+  current: v1
+  base: https://app.wunderite.com/api/v1
+changelog:
+  url: https://docs.wunderite.com/changelog
+  dated_entries: true
+  artifact: changelog/wunderite-changelog.yml
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: no published deprecation policy or RFC 8594 Sunset-header support found in the API docs
+sla:
+  url: null
+status_page: https://status.wunderite.com/
+product_changelog: https://wunderite.com/whats-new/
+deprecated_operations: []

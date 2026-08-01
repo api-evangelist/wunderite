@@ -1,0 +1,62 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.wunderite.com/objects
+identifiers:
+  format: uuid
+  example: 8f2c9f0a-cd6a-4ea7-9ed3-b5d013d01c5b
+entities:
+  core:
+  - addresses
+  - attachments
+  - files
+  - liability_class_codes
+  - naics_codes
+  - risk_profiles
+  - segments
+  - sic_codes
+  - teams
+  - third_party_data
+  - workers_comp_class_codes
+  risk_data:
+  - additional_interests
+  - buildings
+  - contact_emails
+  - contact_phones
+  - contacts
+  - drivers
+  - equipment
+  - homes
+  - legal_entities
+  - liabilities
+  - premises
+  - subjects_of_insurance
+  - vehicles
+  - workers_comp
+relationships:
+- entity: risk_profile
+  has_many:
+  - additional_interests
+  - buildings
+  - contacts
+  - drivers
+  - equipment
+  - homes
+  - legal_entities
+  - liabilities
+  - premises
+  - subjects_of_insurance
+  - vehicles
+  - workers_comp
+  via: /risks/{risk}/data/* endpoints
+- entity: building
+  belongs_to: [premise]
+  has_many: [subjects_of_insurance]
+  via: relations object (include=premise,subjects_of_insurance)
+- entity: contact
+  has_many: [contact_emails, contact_phones]
+notes:
+- >-
+  Objects carry a relations property — "an associative array of related objects" —
+  populated via the include query parameter; available includes are listed in each
+  object model's Relation section.
+- No public OpenAPI spec exists; graph captured from the published object reference.

@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.wunderite.com/errors
+format: custom
+envelope:
+  description: >-
+    Custom JSON error envelope — not RFC 9457. The message field is a string for most
+    errors and an object mapping field names to arrays of messages for 422 validation
+    errors.
+  fields:
+    message: string or object (field => [messages] on 422)
+    status: HTTP status code (integer)
+    validation: boolean flag present on validation errors
+problems:
+- status: 400
+  title: Bad Request
+  detail: Permission or request validation issue with the request
+- status: 401
+  title: Unauthorized
+  detail: Authentication failure — missing or invalid bearer API token
+- status: 403
+  title: Forbidden
+  detail: '"This action is unauthorized"'
+- status: 404
+  title: Not Found
+  detail: '"The requested resource could not be found on the server"'
+- status: 422
+  title: Validation Error
+  detail: Field-level validation failures; message is an object mapping fields to error arrays
+- status: 429
+  title: Too Many Requests
+  detail: 'Rate limited — "Too Many Attempts. Try again in 60 seconds"'
+- status: 500
+  title: Internal Server Error
+  detail: '"Whoops, looks like something went wrong" — unhandled exception or timeout'

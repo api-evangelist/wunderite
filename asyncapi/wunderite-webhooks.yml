@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.wunderite.com/webhooks + https://docs.wunderite.com/webhooks/events
+type: Webhooks
+note: Wunderite documents a full webhook surface but publishes no AsyncAPI document.
+registration:
+  method: POST via API
+  required: [type (custom|zapier), url, at least one subscribed event]
+delivery:
+  headers:
+  - name: Wunderite-Event
+    description: event type
+  - name: Wunderite-Delivery
+    description: unique delivery identifier
+  - name: Wunderite-Signature
+    description: HMAC SHA256 signature computed with the webhook signing secret
+  - name: Wunderite-Webhook
+    description: webhook UUID
+  timeout_seconds: 5
+  retries: up to 3 with exponential backoff at 10, 100, and 1000 seconds on non-2xx or timeout
+  batching: change events carry created/updated/deleted UUID arrays, max 200 records per webhook
+security:
+  signing: HMAC SHA256 — validate the Wunderite-Signature header against the signing secret
+events:
+- name: form.completed
+  description: a form within a risk profile has been completed; includes risk profile, questionnaire, form with download URL, and completing user
+- name: signature_packet.completed
+  description: a signature packet has had all forms signed by all applicable signers; includes packet, forms, signers, completion metadata
+- name: risk_profile.changed
+  description: risk profile created, updated, or deleted; arrays of UUIDs for created/updated/deleted (max 200)
+- name: additional_interest.changed
+- name: building.changed
+- name: contact.changed
+- name: driver.changed
+- name: equipment.changed
+- name: home.changed
+- name: legal_entity.changed
+- name: liability.changed
+- name: premise.changed
+- name: subject_of_insurance.changed
+- name: vehicle.changed
+- name: workers_comp.changed

@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.wunderite.com/quickstart
+docs: https://docs.wunderite.com/quickstart
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  oauth2_flows: []
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: >-
+    API key passed as a bearer token — "Authorization: Bearer {token}" with
+    "Accept: application/json". Keys are generated in Wunderite under
+    Account > Settings > Integrations; docs recommend creating a dedicated
+    API User for programmatic access.
+notes:
+- No OAuth 2.0 or OpenID Connect surface documented.
+- No public OpenAPI spec published; profile captured from the docs quickstart.

@@ -1,0 +1,59 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.wunderite.com (Quickstart, Pagination, Filtering, Sorting, Including, Validation, Errors, Flags, Webhooks)
+authentication:
+  style: bearer-api-key
+  header: 'Authorization: Bearer {token}'
+  accept: application/json
+  artifact: authentication/wunderite-authentication.yml
+idempotency:
+  supported: false
+  note: no idempotency-key header or replay-safety contract documented
+pagination:
+  style: cursor
+  params:
+    per_page: integer 10-100, default 50
+    cursor: opaque cursor string
+  response_fields:
+    data: objects nested under a data attribute
+    path: current request URL
+    per_page: requested page size
+    next_cursor: cursor for the next page (null when exhausted)
+    next_page_url: full URL for the next page
+    prev_cursor: cursor for the previous page (null at start)
+    prev_page_url: full URL for the previous page
+field_expansion:
+  supported: true
+  param: include
+  syntax: comma-separated list (include=premise,subjects_of_insurance) or parameter array (include[]=premise)
+  response: related resources nested under a relations object with UUID references
+  availability: available includes are defined per endpoint in the object model Relation section
+filtering:
+  supported: true
+  docs: https://docs.wunderite.com/filtering
+sorting:
+  supported: true
+  docs: https://docs.wunderite.com/sorting
+request_flags:
+  supported: true
+  docs: https://docs.wunderite.com/flags
+  description: >-
+    Request-level modifiers on POST/PATCH — as query params (?flags[flag_name]=value)
+    or a flags object in the JSON body. Global flags.hydrate (PATCH) returns the full
+    updated object; resource flags like vin_data fill vehicle details from a VIN.
+identifiers:
+  format: uuid
+  example: 8f2c9f0a-cd6a-4ea7-9ed3-b5d013d01c5b
+versioning:
+  scheme: uri-path
+  current: v1
+  artifact: lifecycle/wunderite-lifecycle.yml
+error_envelope:
+  shape: '{message: string|object, status: int, validation: bool}'
+  artifact: errors/wunderite-problem-types.yml
+rate_limiting:
+  signaled_by: HTTP 429 "Too Many Attempts. Try again in 60 seconds"
+  documented_limits: null
+webhooks:
+  signing: HMAC SHA256 via Wunderite-Signature header
+  artifact: asyncapi/wunderite-webhooks.yml

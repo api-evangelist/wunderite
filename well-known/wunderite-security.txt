@@ -1,0 +1,8 @@
+# security.txt for Wunderite
+# For details, see https://wunderite.com/security/bug-bounty-program/
+
+Contact: mailto:security@wunderite.com
+Policy: https://wunderite.com/security/bug-bounty-program/
+Preferred-Languages: en
+Canonical: https://wunderite.com/security/bug-bounty-program/
+Expires: 2026-06-24T23:59:00Z

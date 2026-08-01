@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.wunderite.com/changelog
+scheme: dated entries (YYYY-MM-DD), API remains v1
+current_version: v1
+entries:
+- date: '2026-03-11'
+  url: https://docs.wunderite.com/changelog/2026-03-11
+  breaking: false
+  highlights:
+  - 'Buildings risk data: 12 new fields (owning_entity, basements, fire_alarm, dist_to_fire_hydrant, dist_to_fire_dept, roof_year, roof_type, plumbing_year, electrical_year, heating_year, security_alarm, building_status)'
+  - 'Driver object: is_employee and is_contractor now nullable, defaulting to null'
+- date: '2026-02-25'
+  url: https://docs.wunderite.com/changelog/2026-02-25
+- date: '2026-02-11'
+  url: https://docs.wunderite.com/changelog/2026-02-11
+- date: '2026-02-04'
+  url: https://docs.wunderite.com/changelog/2026-02-04
+- date: '2026-01-28'
+  url: https://docs.wunderite.com/changelog/2026-01-28
+- date: '2026-01-14'
+  url: https://docs.wunderite.com/changelog/2026-01-14
+- date: '2026-01-07'
+  url: https://docs.wunderite.com/changelog/2026-01-07
+- date: '2025-11-26'
+  url: https://docs.wunderite.com/changelog/2025-11-26
+- date: '2025-11-05'
+  url: https://docs.wunderite.com/changelog/2025-11-05
+- date: '2025-10-15'
+  url: https://docs.wunderite.com/changelog/2025-10-15

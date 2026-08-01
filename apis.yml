@@ -1,7 +1,29 @@
 aid: wunderite
 name: Wunderite
-description: Wunderite is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Wunderite is an insurance application automation platform for agencies and brokers that
+  finds, autofills, and digitally signs insurance forms — ACORDs and supplementals — up to
+  12x faster than manual workflows. The platform pairs a powerful autofill engine with live
+  customer collaboration, spreadsheet-like schedule editors, third-party data enrichment,
+  and built-in e-signature (ESIGN/UETA). The Wunderite REST API (v1) exposes risk profiles
+  and risk data — buildings, vehicles, drivers, contacts, premises, equipment, workers'
+  comp, subjects of insurance and more — with bearer-token auth, cursor pagination, field
+  inclusion, and HMAC-signed webhooks, plus direct integrations with Vertafore AMS360,
+  ImageRight, and Zapier. Wunderite is SOC 2 Type II audited and a Techstars portfolio
+  company.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://wunderite.com/wp-content/uploads/2021/12/wunderite-logo-white-bg-3x2-1.png
 url: https://raw.githubusercontent.com/api-evangelist/wunderite/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +33,42 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Insurance
+- Insurtech
+- ACORD Forms
+- Risk Data
+- Digital Signatures
+- Insurance Applications
+- Webhooks
+apis:
+- name: Wunderite API
+  description: >-
+    REST API (v1) for programmatic access to Wunderite risk data and related resources —
+    risk profiles, buildings, vehicles, drivers, contacts, premises, equipment, homes,
+    legal entities, liabilities, subjects of insurance, workers' comp, plus lookup data
+    (NAICS, SIC, class codes). Bearer-token authentication with API keys, cursor-based
+    pagination, filtering, sorting, relation includes, request flags, and HMAC-SHA256
+    signed webhooks for form, signature-packet, and risk-data change events.
+  humanURL: https://docs.wunderite.com
+  baseURL: https://app.wunderite.com/api/v1
+  tags:
+  - Insurance
+  - Risk Data
+  - ACORD Forms
+  properties:
+  - type: Documentation
+    url: https://docs.wunderite.com
+  - type: GettingStarted
+    url: https://docs.wunderite.com/quickstart
+  - type: APIReference
+    url: https://docs.wunderite.com/objects
+  - type: ChangeLog
+    url: https://docs.wunderite.com/changelog
+  - type: Webhooks
+    url: https://docs.wunderite.com/webhooks
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +77,66 @@ maintainers:
 common:
 - type: Website
   url: https://wunderite.com/
+- type: Documentation
+  url: https://docs.wunderite.com
+- type: APIReference
+  url: https://docs.wunderite.com/objects
+- type: GettingStarted
+  url: https://docs.wunderite.com/quickstart
+- type: Support
+  url: https://support.wunderite.com
+- type: Blog
+  url: https://wunderite.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/wunderite
+- type: Pricing
+  url: https://wunderite.com/pricing/
+- type: Login
+  url: https://app.wunderite.com/login
+- type: TermsOfService
+  url: https://wunderite.com/terms/
+- type: PrivacyPolicy
+  url: https://wunderite.com/privacy-policy/
+- type: StatusPage
+  url: https://status.wunderite.com/
+- type: Security
+  url: https://wunderite.com/security/bug-bounty-program/
+- type: Compliance
+  url: https://wunderite.com/security/
+- type: Integrations
+  url: https://wunderite.com/integrations/
+- type: Packages
+  url: packages/wunderite-packages.yml
+- type: WellKnown
+  url: well-known/wunderite-well-known.yml
+- type: SecurityTxt
+  url: well-known/wunderite-security.txt
+- type: LLMsTxt
+  url: llms/wunderite-llms.txt
+- type: Conformance
+  url: conformance/wunderite-conformance.yml
+- type: ErrorCatalog
+  url: errors/wunderite-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/wunderite-lifecycle.yml
+- type: Authentication
+  url: authentication/wunderite-authentication.yml
+- type: Conventions
+  url: conventions/wunderite-conventions.yml
+- type: ChangeLog
+  url: changelog/wunderite-changelog.yml
+- type: DataModel
+  url: data-model/wunderite-data-model.yml
+- type: Webhooks
+  url: asyncapi/wunderite-webhooks.yml
+- type: DomainSecurity
+  url: security/wunderite-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/wunderite-vulnerability-disclosure.yml
+- type: TrustCenter
+  url: security/wunderite-trust-center.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v1

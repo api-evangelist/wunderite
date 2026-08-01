@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+hosts:
+- host: https://wunderite.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 200
+    file: wunderite-security.txt
+    note: RFC 9116 security.txt published at the legacy root location only
+  - path: /llms.txt
+    status: 200
+    file: ../llms/wunderite-llms.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://app.wunderite.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: soft-200 — SPA HTML shell returned for unknown paths, not a valid OIDC document; not saved
+- host: https://docs.wunderite.com
+  documents:
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /openapi.yaml
+    status: 404
+- host: https://api.wunderite.com
+  documents:
+  - path: /
+    status: 0
+    note: host does not resolve — the API is served from https://app.wunderite.com/api/v1

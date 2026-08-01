@@ -1,0 +1,21 @@
+SITE
+Name: Wunderite
+Primary site: https://wunderite.com
+What it is: Wunderite is a digital insurance application and forms platform designed for agencies and brokers. It enables live collaboration with customer accounts, a powerful autofill engine for filling ACORDs and supplemental forms, intake forms, and the ability to supplement applications with third-party data. It also provides spreadsheet-like editors for collaborating on schedules, tools to manage submissions end to end, and built-in digital signature workflows.
+
+HIGH-VALUE DOCS (START HERE)
+API docs (official): https://docs.wunderite.com
+API quickstart: https://docs.wunderite.com/quickstart
+Integrations overview: https://wunderite.com/integrations/
+
+INTEGRATIONS TO KNOW ABOUT
+AMS360: Wunderite offers a direct integration with AMS360, including syncing data and attaching completed applications, schedules, and signed forms directly into AMS360 activities.
+Zapier: Wunderite integrates with Zapier, enabling automation with thousands of other tools and services.
+
+API BASICS (FOR IMPLEMENTATION)
+Base URL pattern: https://app.wunderite.com/api/v1/...
+Auth: Use Authorization: Bearer {token} and Accept: application/json headers.
+Getting an API key: Available in Wunderite under Account > Settings > Integrations.
+
+WHAT TO USE THE API FOR
+The Wunderite API provides access to risk data and related objects and resources. This includes structured access to statements of values, schedules, and associated risk information used in submissions and underwriting workflows.

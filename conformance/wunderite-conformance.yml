@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://wunderite.com/security/ + https://docs.wunderite.com
+standards:
+- id: soc2-type-ii
+  conforms: true
+  evidence: >-
+    https://wunderite.com/security/ — "We have successfully completed our SOC 2 Type II
+    audit with no exceptions for two consecutive years"; annual audits committed.
+- id: esign-act
+  conforms: true
+  evidence: https://wunderite.com/security/ — electronic signatures supported under the ESIGN Act
+- id: ueta
+  conforms: true
+  evidence: https://wunderite.com/security/ — electronic signatures supported under UETA
+- id: oauth2
+  conforms: false
+  evidence: docs.wunderite.com — authentication is bearer API keys generated in account settings; no OAuth 2.0 flows documented
+- id: oidc
+  conforms: false
+  evidence: no /.well-known/openid-configuration on wunderite.com; app.wunderite.com path returns SPA shell
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: docs.wunderite.com/errors — custom JSON error envelope (message/status/validation), not application/problem+json
+- id: rfc9116-security-txt
+  conforms: true
+  evidence: https://wunderite.com/security.txt — RFC 9116 file (Contact, Policy, Canonical, Expires) at legacy root location
+- id: cursor-pagination
+  conforms: true
+  evidence: docs.wunderite.com/pagination — cursor-based pagination (cursor/per_page params, next_cursor/prev_cursor fields)
+- id: webhook-hmac-signing
+  conforms: true
+  evidence: docs.wunderite.com/webhooks — Wunderite-Signature header, HMAC SHA256 with signing secret
+- id: idempotency
+  conforms: false
+  evidence: no idempotency-key mechanism documented in the API docs
+- id: tls-1-2-plus
+  conforms: true
+  evidence: https://wunderite.com/security/ — TLS 1.2+ required for all HTTPS connections; AES-256 encryption at rest

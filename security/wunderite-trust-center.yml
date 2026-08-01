@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+url: https://wunderite.com/security/
+certifications: [SOC 2 Type II]
+details:
+  soc2: >-
+    "We have successfully completed our SOC 2 Type II audit with no exceptions for two
+    consecutive years" — annual audits committed; reports available upon request under NDA.
+  encryption: AES-256 application-level encryption at rest; TLS 1.2+ for all HTTPS connections
+  esignature: ESIGN Act and UETA support
+  security_contact: security@wunderite.com (phone 888-986-3374)
+notes:
+- No dedicated trust-center subdomain (trust.wunderite.com); the security page carries the compliance posture.
+- No ISO 27001, HIPAA, FedRAMP, or PCI certifications published.
+evidence:
+- source: https://wunderite.com/security/
+  keywords: [SOC 2 Type II, AES-256, TLS 1.2, ESIGN, UETA]
