@@ -11,6 +11,17 @@ description: >-
   inclusion, and HMAC-signed webhooks, plus direct integrations with Vertafore AMS360,
   ImageRight, and Zapier. Wunderite is SOC 2 Type II audited and a Techstars portfolio
   company.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
