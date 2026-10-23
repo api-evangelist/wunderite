@@ -5,16 +5,17 @@
       "source": "https://wunderite.com/blog/",
       "feed_url": "https://wunderite.com/blog/feed/",
       "title": "",
-      "saved": 1,
+      "saved": 0,
       "method": "discovered"
     },
     {
-      "source": "https://support.wunderite.com",
-      "feed_url": "",
+      "source": "https://wunderite.com/blog/feed/",
+      "feed_url": "https://wunderite.com/blog/feed/",
+      "title": "",
       "saved": 0,
-      "skipped": "community-shaped; a vendor feed already saved this run (roadmap#239)"
+      "method": "feed"
     }
   ],
-  "post_count": 1,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 10,
+  "fetched": "2026-10-17T14:53:57Z"
 }
